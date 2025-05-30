@@ -1,0 +1,141 @@
+.testimonials {
+    max-width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    /* Garante que nada ultrapasse */
+}
+
+.title h2 {
+    font-size: 2.2em;
+    font-weight: bold;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.title span {
+    display: inline-block;
+}
+
+.title .highlight {
+    color: #8b3a2d;
+}
+
+.vector {
+    margin-top: 10px;
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* ===== Carrossel automático ===== */
+.cards {
+    display: flex;
+    width: fit-content;
+    animation: slide-left 40s linear infinite;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.ribbons-fullscreen {
+    width: 100vw;
+    position: relative;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.ribbons-fullscreen img {
+    width: 100vw;
+    display: block;
+}
+.card-ava {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 334px;
+    height: 393px;
+    padding: 30px 20px;
+    text-align: center;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.stars {
+    font-size: 1.2em;
+    color: #c9a04d;
+    margin-bottom: 10px;
+}
+
+.card-ava p {
+    font-size: 0.95em;
+    margin-bottom: 10px;
+    color: #333;
+    /* cor mais escura para visibilidade */
+}
+
+.card-ava strong {
+    color: #000;
+}
+
+.cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 50px;
+    padding: 20px 20px;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Georgia', serif; /* estilo semelhante ao print */
+
+    color: #fff;
+    background-color: #3d1f16;
+
+    border: 1px solid #3d1f16;
+    border-radius: 9px;
+    outline: 1px solid #3d1f16;
+    outline-offset: 5px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+
+.cta:hover {
+    background-color: #5a2e22;
+    outline-color: #5a2e22;
+}
+
+
+.cta img {
+    width: 15px;
+    height: 15px;
+}

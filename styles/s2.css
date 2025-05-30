@@ -1,0 +1,90 @@
+.background {
+    position: relative;
+    background-image: url("/assets/img/background1.png");
+    /* Corrigido o caminho */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    overflow: hidden;
+}
+
+.conteudo {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+}
+
+h2 {
+    font-family: 'Inria Serif', serif;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    line-height: 1.2;
+}
+
+.servicos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 820px; /* 3 cards * (240px + 40px de gap) - 40px do último gap = 760px + margem */
+    margin: 0 auto; /* Centraliza o container */
+}
+
+.card {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.info {
+    padding-top: 8px;
+    /* Mantém espaço entre a imagem e o número/linha */
+}
+
+.numero-linha {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.numero {
+    width: 30px;
+    height: 30px;
+    background-color: #E9DAD1;
+    color: #4B1F0E;
+    font-family: 'Inria Serif', serif;
+    font-size: 24px;
+    font-weight: normal;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linha {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #E5E5E5;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #eee;
+}
