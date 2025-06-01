@@ -1,0 +1,60 @@
+.espaco {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.espaco h2 {
+    font-size: 2.6rem;
+    margin-bottom: 30px;
+}
+
+.imagem {
+    width: 90%;
+    max-width: 700px;
+    height: 360px;
+    margin: 0 auto 30px;
+    background-image: url("/assets/img/image\ 2\ \(1\).png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-image 0.3s ease-in-out;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    flex-direction: column;
+}
+
+.botoes .linh {
+    display: flex;
+    justify-content: center;
+    gap: 32px; /* Aumente esse valor conforme necessário */
+}
+
+.botoes button {
+    padding: 17px 30px;
+    border: 1px solid #4d2c1d;
+    background-color: transparent;
+    color: #4d2c1d;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    font-family: 'Inria Serif', serif;
+    font-weight: bolder;
+}
+
+.botoes button:hover {
+    background-color: #4d2c1d;
+    color: #fff;
+}
+
+.botoes button.ativo {
+    background-color: #8b3e24;
+    color: #fff;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}

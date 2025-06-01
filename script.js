@@ -18,3 +18,21 @@ function autoScrollCards() {
 }
 
 setInterval(autoScrollCards, interval);
+
+// Exemplo simples de rolagem suave
+document.querySelector('.botao').addEventListener('click', function (e) {
+  e.preventDefault();
+  document.querySelector('#contato')?.scrollIntoView({ behavior: 'smooth' });
+});
+
+function trocarImagem(botao, nomeImagem) {
+  const imagem = document.getElementById('imagemEspaco');
+  imagem.style.backgroundImage = `url("/assets/img/${nomeImagem}")`;
+
+  // Remove classe "ativo" de todos os botões
+  const botoes = document.querySelectorAll('.botoes button');
+  botoes.forEach(b => b.classList.remove('ativo'));
+
+  // Adiciona classe "ativo" ao botão clicado
+  botao.classList.add('ativo');
+}
