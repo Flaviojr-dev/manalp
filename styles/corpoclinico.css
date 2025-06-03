@@ -1,0 +1,85 @@
+.corpo-clinico {
+    background-image: url("/assets/img/Group\ 11.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px 20px;
+    text-align: center;
+    height: 300px;
+}
+
+.corpo-clinico h2 {
+    font-size: 2em;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.cards-clinico {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    /* Para responsividade */
+}
+
+.card-clinico {
+    padding: 20px 10px;
+    width: 250px;
+    box-sizing: border-box;
+    text-align: center;
+    user-select: none; /* Impede seleção de texto/imagem ao arrastar */
+
+}
+
+.card-clinico img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+    /* Transição suave */
+    user-select: none; /* Impede de selecionar */
+    -webkit-user-drag: none; /* Impede arrastar no Safari */
+}
+
+.card-clinico img:hover {
+    transform: scale(1.05);
+    /* Efeito de zoom suave só na imagem */
+}
+
+.cards-clinico.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.card-clinico strong {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 1em;
+    color: #3b1e15;
+    margin-bottom: 5px;
+}
+
+.card-clinico span {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 0.9em;
+    color: #7a5e52;
+}
+
+@media (max-width: 768px) {
+
+    .cards-clinico {
+        flex-wrap: nowrap; /* Cards em linha */
+        overflow-x: auto; /* Scroll horizontal */
+        -webkit-overflow-scrolling: touch; /* Suaviza no iOS */
+    }
+
+    .card-clinico {
+        flex: 0 0 70%; /* Largura de cada card no mobile */
+        max-width: 300px;
+    }
+}

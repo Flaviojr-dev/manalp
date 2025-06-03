@@ -12,6 +12,17 @@
     font-weight: bold;
     width: 400px;
     margin: 0 auto;
+    line-height: 35px;
+    background: linear-gradient(90deg, #3B1E15 0%, #A15239 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card-ava strong{
+    background: linear-gradient(90deg, #3B1E15 0%, #A15239 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
 }
 
 .title span {
@@ -71,8 +82,15 @@
     width: 100vw;
     display: block;
 }
+
 .card-ava {
-    background-color: #fff;
+    background-image: url('../assets/img/fundobox.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    /* Leve branco translúcido sobre a imagem */
+
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 334px;
@@ -84,24 +102,35 @@
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+
+    position: relative;
+    z-index: 1;
 }
 
 .stars {
-    font-size: 1.2em;
-    color: #c9a04d;
+    display: flex;
+    justify-content: center;
     margin-bottom: 10px;
+}
+
+.stars img {
+    width: 120px;
+    /* ajuste conforme o tamanho ideal */
+    height: auto;
+    /* mantém proporção */
 }
 
 .card-ava p {
-    font-size: 0.95em;
+    font-size: 1.1em;
     margin-bottom: 10px;
-    color: #333;
-    /* cor mais escura para visibilidade */
+    width: 170px;
+    line-height: 20px;
+    margin: 0 auto;
+    background: linear-gradient(90deg, #3B1E15 0%, #A15239 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.card-ava strong {
-    color: #000;
-}
 
 .cta {
     display: inline-flex;
@@ -113,7 +142,8 @@
     font-size: 1.2em;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: 'Georgia', serif; /* estilo semelhante ao print */
+    font-family: 'Georgia', serif;
+    /* estilo semelhante ao print */
 
     color: #fff;
     background-color: #3d1f16;

@@ -19,20 +19,33 @@ function autoScrollCards() {
 
 setInterval(autoScrollCards, interval);
 
-// Exemplo simples de rolagem suave
-document.querySelector('.botao').addEventListener('click', function (e) {
-  e.preventDefault();
-  document.querySelector('#contato')?.scrollIntoView({ behavior: 'smooth' });
+const slider = document.querySelector('.cards-clinico');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
 });
 
-function trocarImagem(botao, nomeImagem) {
-  const imagem = document.getElementById('imagemEspaco');
-  imagem.style.backgroundImage = `url("/assets/img/${nomeImagem}")`;
+slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
 
-  // Remove classe "ativo" de todos os botões
-  const botoes = document.querySelectorAll('.botoes button');
-  botoes.forEach(b => b.classList.remove('ativo'));
+slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
 
-  // Adiciona classe "ativo" ao botão clicado
-  botao.classList.add('ativo');
-}
+slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2; // Velocidade do arrasto
+    slider.scrollLeft = scrollLeft - walk;
+});
